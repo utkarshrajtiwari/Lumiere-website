@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "logofont";
+  src: url("./fonts/ABChanel.ttf") format("truetype");
+}
