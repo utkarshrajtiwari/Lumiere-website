@@ -3,9 +3,12 @@ import "./index.css";
 import App from "./App.jsx";
 import { BrowserRouter } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
+import ProductContext from "./context/ProductContext.jsx";
 createRoot(document.getElementById("root")).render(
-  <BrowserRouter>
-    <App />
-    <ToastContainer />
-  </BrowserRouter>
+  <ProductContext>
+    <BrowserRouter>
+      <App />
+      <ToastContainer />
+    </BrowserRouter>
+  </ProductContext> 
 );

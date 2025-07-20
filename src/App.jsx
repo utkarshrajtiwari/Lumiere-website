@@ -4,7 +4,7 @@ import NavBar from "./components/common/NavBar";
 
 const App = () => {
   return (
-    <div className="h-screen w-full bg-zinc-900">
+    <div className=" w-full text-[#DDDDDD]">
       <NavBar />
       <Mainroutes />
     </div>
