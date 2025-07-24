@@ -5,7 +5,7 @@ const ProductBanner = () => {
         <div className="w-full lg:h-[40vh] xl:h-[60vh] 2xl:h-[70vh]   overflow-hidden">
           <img
             className=" w-full h-full object-[25%_top] object-cover "
-            src="/src/assets/images/productbanner.jpg"
+            src="/public/images/productbanner.jpg"
             alt=""
           />
         </div>

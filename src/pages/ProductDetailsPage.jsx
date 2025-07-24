@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { productContext } from "../context/ProductContext";
 import ProductDetailVideo from "../components/productDetalsCompo/ProductDetailVideo";
 import ScrollVelocity from "../components/reactbits/ScrollVelocity";
+import ProductDetailImage from "../components/productDetalsCompo/ProductDetailVideo";
 const ProductDetailsPage = () => {
   const { data } = useContext(productContext);
   const params = useParams();
@@ -44,7 +45,7 @@ const ProductDetailsPage = () => {
           </button>
         </div>
       </div>
-      <ProductDetailVideo />
+      <ProductDetailImage />
       <ScrollVelocity
         texts={["PRODUCT SECTION", "YOUR IMAGINATION"]}
         velocity={100}
