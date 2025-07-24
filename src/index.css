@@ -4,3 +4,15 @@
   font-family: "logofont";
   src: url("./fonts/ABChanel.ttf") format("truetype");
 }
+
+@font-face {
+  font-family: "heading";
+  src: url("./fonts/silkserif-regular.ttf") format("truetype");
+  font-weight: 900;
+  color: transparent;
+}
+
+@font-face {
+  font-family: "para";
+  src: url("./fonts/Aktiv.ttf") format("truetype");
+}

@@ -12,7 +12,7 @@ const NavBar = () => {
           <div className="logo text-4xl">
             <h1 className="font-['logofont']">Lumiere</h1>
           </div>
-          <div className="link flex gap-15 text-xs font-semibold">
+          <div className="link flex gap-15 text-sm font-semibold">
             <NavLink className={(e) => (e.isActive ? "border-b-2" : "")} to="/">
               Home
             </NavLink>
@@ -33,7 +33,7 @@ const NavBar = () => {
 
         <div className="mobile md:hidden px-6 py-5 flex flex-col gap-2 border-white">
           <div className="flex justify-between">
-            <h1 className="font-['logofont'] text-2xl ">Lumiere</h1>
+            <h1 className="font-['logofont'] text-4xl ">Lumiere</h1>
 
             <button className="text-2xl" onClick={() => setIsOpen(!isOpen)}>
               <IoIosMenu />
