@@ -37,7 +37,7 @@ const Featured = () => {
             spotlightColor="rgba(221, 221, 221, 0.9)"
           >
             <div className="w-full h-full overflow-hidden">
-              <img className="w-full h-full object-cover" src="../../../public/product/featured-1.jpg" alt="" />
+              <img className="w-full h-full object-cover" src="/src/assets/images/featured-1.jpg" alt="" />
             </div>
             <div>
               <h3 className="font-['heading']">SHIRT DRESS</h3>
@@ -51,7 +51,7 @@ const Featured = () => {
             spotlightColor="rgba(221, 221, 221, 0.9)"
           >
             <div className="w-full h-full overflow-hidden">
-              <img className="w-full h-full object-cover" src="../../../public/product/featured-2.jpg" alt="" />
+              <img className="w-full h-full object-cover" src="/src/assets/images/featured-2.jpg" alt="" />
             </div>
             <div>
               <h3 className="font-['heading']">SHEER MESH GOWN</h3>
@@ -65,7 +65,7 @@ const Featured = () => {
             spotlightColor="rgba(221, 221, 221, 0.9)"
           >
             <div className="w-full h-full overflow-hidden">
-              <img className="w-full h-full object-cover" src="../../../public/product/featured-3.jpg" alt="" />
+              <img className="w-full h-full object-cover" src="/src/assets/images/featured-3.jpg" alt="" />
             </div>
             <div>
               <h3 className="font-['heading']">WOMEN'S POWER SUIT</h3>

@@ -7,7 +7,7 @@ const Landing = () => {
       <div className="picture w-full h-screen overflow-hidden">
         <img
           className="w-full h-full object-cover object-[33%_center] sm:object-[33%_center]"
-          src="/public/four (1).jpg"
+          src="/src/assets/images/LumiereBanner.jpg"
           alt=""
         />
       </div>

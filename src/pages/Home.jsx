@@ -10,6 +10,7 @@ const Home = () => {
       <Landing />
       <Featured />
       <Marquee />
+      <PlayReel />
       <NewsLetter />
     </div>
   );
