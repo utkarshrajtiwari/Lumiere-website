@@ -10,7 +10,7 @@ const PlayReel = () => {
           muted
           loop
           className="w-full h-full object-contain absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 scale-[1.2]"
-          src="/public/images/PlayReel.mp4"
+          src="/images/PlayReel.mp4"
         ></video>
       </div>
 

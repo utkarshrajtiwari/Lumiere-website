@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
 import { useParams } from "react-router-dom";
 import { productContext } from "../context/ProductContext";
-import ProductDetailVideo from "../components/productDetalsCompo/ProductDetailVideo";
+import ProductDetailVideo from "../components/productDetalsCompo/ProductDetailImage";
 import ScrollVelocity from "../components/reactbits/ScrollVelocity";
-import ProductDetailImage from "../components/productDetalsCompo/ProductDetailVideo";
+import ProductDetailImage from "../components/productDetalsCompo/ProductDetailImage";
 const ProductDetailsPage = () => {
   const { data } = useContext(productContext);
   const params = useParams();
