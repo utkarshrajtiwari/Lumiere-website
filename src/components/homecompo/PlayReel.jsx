@@ -7,18 +7,29 @@ const PlayReel = () => {
   const videodiv = useRef(null);
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
-    gsap.to(videodiv.current, {
-      scrollTrigger: {
-        trigger: parent.current,
-        top: "0 0",
-        pin: true,
-        scrub: 5,
-      },
-      width: "105%",
-      height: "105%",
-      ease: Power4.easeInOut,
-    });
-  });
+    
+    const ctx = gsap.context(() => {
+      gsap.to(videodiv.current, {
+        scrollTrigger: {
+          trigger: parent.current,
+          start: "top top",
+          end: "bottom top",
+          pin: true,
+          scrub: 1,
+          refreshPriority: -1,
+          invalidateOnRefresh: true,
+        },
+        width: "105%",
+        height: "105%",
+        ease: Power4.easeInOut,
+      });
+    }, parent);
+
+    return () => {
+      ctx.revert();
+      ScrollTrigger.refresh();
+    };
+  }, []);
   return (
     <div
       ref={parent}
