@@ -4,7 +4,14 @@ import { productContext } from "../context/ProductContext";
 import ProductDetailVideo from "../components/productDetalsCompo/ProductDetailImage";
 import ScrollVelocity from "../components/reactbits/ScrollVelocity";
 import ProductDetailImage from "../components/productDetalsCompo/ProductDetailImage";
+import Footer from "../components/common/Footer";
+import Marquee from "../components/common/Marquee";
+
+import LocomotiveScroll from "locomotive-scroll";
+
 const ProductDetailsPage = () => {
+  const locomotiveScroll = new LocomotiveScroll();
+
   const { data } = useContext(productContext);
   const params = useParams();
   const product = data.find((elem) => params.id === elem.id);
@@ -45,12 +52,14 @@ const ProductDetailsPage = () => {
           </button>
         </div>
       </div>
+      <Marquee />
       <ProductDetailImage />
       <ScrollVelocity
         texts={["PRODUCT SECTION", "YOUR IMAGINATION"]}
         velocity={100}
         className="custom-scroll-text font-['heading']"
       />
+      <Footer />
     </div>
   );
 };

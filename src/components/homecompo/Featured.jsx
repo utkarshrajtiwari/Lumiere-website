@@ -2,6 +2,7 @@ import React from "react";
 import { SiPolestar } from "react-icons/si";
 import { useNavigate } from "react-router-dom";
 import SpotlightCard from "../reactbits/SpotlightCard";
+import { motion } from "motion/react";
 
 const Featured = () => {
   const navigate = useNavigate();
@@ -25,8 +26,16 @@ const Featured = () => {
         {/* //////////////////////////////////////////////////////////////////////////////////////// */}
 
         <div className="overlay-image-heading flex flex-col gap-10 text-center items-center">
-          <h1 className="font-['para'] text-5xl md:text-7xl xl:text-9xl">
-            NEW ARRIVALS
+          <h1 className="font-['para'] text-5xl md:text-7xl xl:text-9xl overflow-hidden">
+            <motion.span
+              initial={{ rotate: 90, y: "40%", opacity: 0 }}
+              whileInView={{ rotate: 0, y: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ ease: [0.22, 1, 0.36, 1], duration: 2 }}
+              className="inline-block origin-left"
+            >
+              NEW ARRIVALS
+            </motion.span>
           </h1>
           <span className="flex gap-2 border-b-1">
             <SiPolestar className="text-2xl " />{" "}
@@ -43,6 +52,8 @@ const Featured = () => {
           >
             <div className="w-full h-full overflow-hidden">
               <img
+                data-scroll
+                data-scroll-speed="-.2"
                 className="w-full h-full object-cover"
                 src="/images/featured_1.jpg"
                 alt=""
@@ -74,11 +85,13 @@ const Featured = () => {
           {/* ////////////////////////////////////////////////////////////////////////////////////////// */}
 
           <SpotlightCard
-            className="custom-spotlight-card mx-auto w-[95%] flex flex-col items-center"
+            className="custom-spotlight-card mx-auto w-[95%] flex flex-col items-center overflow-hidden"
             spotlightColor="rgba(221, 221, 221, 0.9)"
           >
             <div className="w-full h-full overflow-hidden">
               <img
+                data-scroll
+                data-scroll-speed="-0.2"
                 className="w-full h-full object-cover"
                 src="/images/featured_3.jpg"
                 alt=""

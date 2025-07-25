@@ -1,17 +1,38 @@
-import React from "react";
+import gsap, { Power4, ScrollTrigger } from "gsap/all";
+import React, { useEffect, useRef } from "react";
 import { SiPolestar } from "react-icons/si";
 
 const PlayReel = () => {
+  const parent = useRef(null);
+  const videodiv = useRef(null);
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.to(videodiv.current, {
+      scrollTrigger: {
+        trigger: parent.current,
+        top: "0 0",
+        pin: true,
+        scrub: 5,
+      },
+      width: "105%",
+      height: "105%",
+      ease: Power4.easeInOut,
+    });
+  });
   return (
-    <div className="w-full h-screen overflow-hidden relative bg-black">
-      <div className="w-40 aspect-video absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 overflow-hidden md:w-60 sm:w-90">
-        <video
-          autoPlay
-          muted
-          loop
+    <div
+      ref={parent}
+      className="w-full h-screen overflow-hidden relative bg-black"
+    >
+      <div
+        ref={videodiv}
+        className="w-40 aspect-video absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 overflow-hidden md:w-60 sm:w-90"
+      >
+        <img
           className="w-full h-full object-contain absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 scale-[1.2]"
-          src="/images/PlayReel.mp4"
-        ></video>
+          src="/images/Playreel.gif"
+          alt=""
+        />
       </div>
 
       <div className=" overlay absolute w-full h-screen  text-white flex flex-col justify-between py-20">
@@ -21,10 +42,10 @@ const PlayReel = () => {
         </div>
         <h1 className="w-full justify-center flex gap-20 md:gap-[25rem] sm:gap-[40rem]">
           <div className="text-6xl font-medium md:text-7xl sm:text-9xl">
-            Play
+            Fashion
           </div>
           <div className="text-6xl font-medium md:text-7xl sm:text-9xl">
-            Reel
+            Brand
           </div>
         </h1>
         <p className="text-center px-10 font-medium text-sm">

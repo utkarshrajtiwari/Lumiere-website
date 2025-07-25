@@ -15,7 +15,8 @@ const Landing = () => {
         <div className="heading font-['logofont'] text-center">
           <SplitText
           ease="power3.out"
-          delay={300}
+          from={{opacity:0, y:100}}
+          delay={500}
           duration={2}
             text="LUMIERE"
             className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-[10rem] 2xl:text-[14rem] leading-tight"

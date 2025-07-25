@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { IoIosMenu } from "react-icons/io";
+import { motion } from "motion/react";
+import { Power4 } from "gsap/all";
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -8,7 +10,12 @@ const NavBar = () => {
   return (
     <div className="w-full fixed z-[999]">
       <div className="max-w-screen-2xl mx-auto ">
-        <div className="desktop hidden md:flex md:justify-between md:items-center md:py-5 md:px-14">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ ease: Power4.easeInOut, duration: 2.5 }}
+          className="desktop hidden md:flex md:justify-between md:items-center md:py-5 md:px-14"
+        >
           <div className="logo text-4xl">
             <h1 className="font-['logofont']">Lumiere</h1>
           </div>
@@ -29,9 +36,14 @@ const NavBar = () => {
               About
             </NavLink>
           </div>
-        </div>
+        </motion.div>
 
-        <div className="mobile md:hidden px-6 py-5 flex flex-col gap-2 border-white">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ ease: Power4.easeInOut, duration: 2.5 }}
+          className="mobile md:hidden px-6 py-5 flex flex-col gap-2 border-white"
+        >
           <div className="flex justify-between">
             <h1 className="font-['logofont'] text-4xl ">Lumiere</h1>
 
@@ -61,7 +73,7 @@ const NavBar = () => {
               </NavLink>
             </div>
           )}
-        </div>
+        </motion.div>
       </div>
     </div>
   );
